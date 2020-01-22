@@ -4,10 +4,10 @@ resource "aws_security_group" "consul_security_group" {
   vpc_id      = var.vpc_id
 
   ingress {
-    protocol    = "tcp"
     cidr_blocks = var.cidr_blocks
-    from_port   = var.http_port
-    to_port     = var.http_port
+    protocol    = "tcp"
+    from_port   = var.wan_serf
+    to_port     = var.wan_serf
   }
 
   ingress {

@@ -18,3 +18,6 @@ variable "cidr_blocks" {
   type     = list(string)
   default = ["0.0.0.0/0"]
 }
+variable "wan_serf" {
+  default = "8302"
+}
